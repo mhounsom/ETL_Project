@@ -7,3 +7,12 @@ Sources:
 https://data.world/dataremixed/mls-player-salaries-2010-2018
 
 https://www.kaggle.com/josephvm/major-league-soccer-dataset?select=all_players.csv
+
+The files was extracted from csv  using pandas dataframe tools.
+One of the dataframe has the players last name and first name on two separate columns, so we had to concatenate the two columns to form one column called player to allow us to join this table with the other easier
+We dropped some columns that seemed too much and will make the dataframe to confusing
+The players dataframe has data from 1996 to 2020 with regular season and post-session columns. We removed the post session limited our study from 2009 to 2018 to match the second dataframe
+Another dataframe cleaning we did was to removed the goalkeeper position (GP) from the salaries dataframe because goalkeeper are not present in the players dataframe
+
+After cleaning the two dataframes, we loaded our data to SQL datbase where we able able to join the two tables using the player's name, the club and the year played
+
